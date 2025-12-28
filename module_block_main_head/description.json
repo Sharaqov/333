@@ -12,9 +12,11 @@
    "status": 1,
    "type": 1,
    "available_types": "1",
-   "translation": 0,
+   "translation": 1,
    "interface": 1,
+   "data": 1,
    "interface_adjacent": "afternavbar",
-   "css": 1
+   "css": 1,
+   "js": 1
  }
 }
