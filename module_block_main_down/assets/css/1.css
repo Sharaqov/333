@@ -1,0 +1,119 @@
+.buttons__wrapper {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: .625rem;
+}
+
+@media (max-width: 768px) {
+ .buttons__wrapper {
+   flex-direction: column;
+ }
+}
+
+.buttons__block {
+ padding: 2rem;
+ overflow: hidden;
+ border-radius: var(--br-16);
+ position: relative;
+ background-color: var(--card);
+ flex: 1;
+ width: 100%;
+ min-height: 7.125rem;
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+ border: 1px solid var(--transparent-5-w);
+ transition: var(--transition-duration);
+}
+
+.buttons__block:last-child {
+ justify-content: flex-start;
+}
+
+.buttons__block img {
+ position: absolute;
+ right: 0;
+ top: 33px;
+ height: 100%;
+ width: auto;
+ transition: var(--transition-duration);
+ z-index: 1;
+ scale: 1.5;
+}
+
+.buttons__block:first-child img {
+ left: 0;
+ top: 7px;
+ scale: 1.1;
+}
+
+.buttons__block:first-child:hover img {
+ scale: 1.2;
+}
+
+.buttons__block:last-child:before,
+.buttons__block:first-child:before {
+ content: '';
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background-image: linear-gradient(90deg, transparent, var(--span));
+ z-index: 1;
+ right: 0;
+ opacity: .15;
+ pointer-events: none;
+ transition: var(--transition-duration);
+}
+
+.buttons__block:first-child:before {
+ background-image: linear-gradient(270deg, transparent, var(--span));
+}
+
+.buttons__block:hover:last-child:before,
+.buttons__block:hover:first-child:before {
+ opacity: .3
+}
+
+.buttons__text {
+ font-size: var(--font-size-4xl);
+ font-weight: var(--font-weight-7);
+ font-family: var(--font-family-1);
+ color: var(--text-default);
+ transition: var(--transition-duration);
+}
+
+.buttons__block:hover {
+ background-color: var(--input-form)
+}
+
+.buttons__block:hover img {
+ scale: 1.6
+}
+
+.buttons__block:hover .buttons__text {
+ color: var(--span);
+}
+
+.buttons__text-wrapper {
+ display: flex;
+ flex-direction: column;
+ z-index: 1;
+ align-items: flex-end;
+}
+
+.buttons__block:last-child .buttons__text-wrapper {
+ align-items: flex-start;
+}
+
+.buttons__text-descriptions {
+ text-shadow: 1px 1px 2px black;
+ font-size: var(--font-size-m);
+ font-weight: var(--font-weight-6);
+ opacity: .7;
+ transition: var(--transition-duration);
+}
+
+.buttons__block:hover .buttons__text-descriptions {
+ opacity: 1;
+}
